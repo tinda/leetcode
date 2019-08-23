@@ -18,8 +18,8 @@ public class Two_Sum_IV {
          * Target = 9
          */
         TreeNode bt = new TreeNode(5);
-        bt.left = new TreeNode(6);
-        bt.right = new TreeNode(3);
+        bt.left = new TreeNode(3);
+        bt.right = new TreeNode(6);
         bt.left.left = new TreeNode(2);
         bt.left.right = new TreeNode(4);
         bt.right.right = new TreeNode(7);
