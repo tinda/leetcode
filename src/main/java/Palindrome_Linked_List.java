@@ -1,9 +1,7 @@
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
 
 /**
+ * https://leetcode.com/problems/palindrome-linked-list/submissions/
+ *
  * Given a singly linked list, determine if it is a palindrome.
  * <p>
  * Example 1:
@@ -65,7 +63,7 @@ public class Palindrome_Linked_List {
         }
         return true;
 
-    
+
     }
 
     public static class ListNode {
