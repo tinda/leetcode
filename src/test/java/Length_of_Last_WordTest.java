@@ -41,6 +41,11 @@ public class Length_of_Last_WordTest {
         LastWordLengthShouldBe(" a", 1);
     }
 
+    @Test
+    public void s_is_should_return_0(){
+        LastWordLengthShouldBe("", 0);
+    }
+
     private static void LastWordLengthShouldBe(String s, int expected) {
         Assert.assertSame(expected, new Length_of_Last_Word().lengthOfLastWord(s));
     }

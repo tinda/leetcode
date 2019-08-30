@@ -1,15 +1,18 @@
 public class Length_of_Last_Word {
 
-    public int lengthOfLastWord(String s) {
-
-        String[] clearS = s.split("");
-
-        for (int i = clearS.length - 1; i >= 0; i--) {
-            System.out.println("->" + clearS[i] + "<-");
-            if (clearS[i].equals(" ")) {
-                return clearS.length - 1 - i;
-            }
-        }
-        return clearS.length;
+    public static void main(String[] args) {
+        System.out.println(lengthOfLastWord(""));
     }
+
+    public static int lengthOfLastWord(String s) {
+
+        String use = s.trim();
+        int count = 0;
+        for (int i = use.length() - 1; i >= 0; i--) {
+            if (use.charAt(i) != ' ') count++;
+            else break;
+        }
+        return count;
+    }
+    
 }
