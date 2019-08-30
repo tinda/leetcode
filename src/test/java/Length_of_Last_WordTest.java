@@ -31,6 +31,11 @@ public class Length_of_Last_WordTest {
         LastWordLengthShouldBe("bc ", 2);
     }
 
+    @Test
+    public void s_is_bc_space_xyz_should_return_3() {
+        LastWordLengthShouldBe("bc xyz", 3);
+    }
+
     private static void LastWordLengthShouldBe(String s, int expected) {
         Assert.assertSame(expected, new Length_of_Last_Word().lengthOfLastWord(s));
     }
