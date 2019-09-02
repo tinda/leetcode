@@ -38,6 +38,8 @@ public class Add_Two_Numbers {
 
             if (hasl1Next && l1.next.next != null) {
                 result.next.next = new ListNode(l1.next.next.val);
+            } else if (hasl2Next && l2.next.next != null) {
+                result.next.next = new ListNode(l2.next.next.val);
             }
         }
 
