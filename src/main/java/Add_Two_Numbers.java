@@ -1,3 +1,7 @@
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * https://leetcode.com/problems/add-two-numbers/
  * <p>
@@ -21,11 +25,21 @@ public class Add_Two_Numbers {
 
 
     public static class ListNode {
-        int val;
-        ListNode next;
+        public int val;
+        public ListNode next;
 
-        ListNode(int x) {
+        public ListNode(int x) {
             val = x;
+        }
+
+        public Iterable<Integer> All() {
+            LinkedList result = new LinkedList<Integer>();
+            result.add(this.val);
+
+            if (this.next != null) {
+                result.addAll((Collection) next.All());
+            }
+            return result;
         }
     }
 
