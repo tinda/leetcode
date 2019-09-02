@@ -45,7 +45,25 @@ public class Add_Two_NumbersTest {
         Add_Two_Numbers.ListNode expected = new Add_Two_Numbers.ListNode(4);
         expected.next = new Add_Two_Numbers.ListNode(1);
 
-        AssertResult(expected, l1, l2);
+        Add_Two_Numbers.ListNode expected2 = CreateListNodes(new int[]{4, 1});
+
+        AssertResult(expected2, l1, l2);
+    }
+
+    private static Add_Two_Numbers.ListNode CreateListNodes(int[] nums) {
+        if (nums.length == 0) {
+            return null;
+        }
+
+        Add_Two_Numbers.ListNode listNode = new Add_Two_Numbers.ListNode(nums[0]);
+
+        Add_Two_Numbers.ListNode currentNode = listNode;
+        for (int i = 1; i < nums.length; i++) {
+            currentNode.next = new Add_Two_Numbers.ListNode(nums[i]);
+            currentNode = currentNode.next;
+        }
+
+        return listNode;
     }
 
     private static void AssertResult(Add_Two_Numbers.ListNode expected, Add_Two_Numbers.ListNode l1, Add_Two_Numbers.ListNode l2) {
