@@ -24,12 +24,17 @@ public class Add_Two_Numbers {
         int rootVal = rootSum % 10;
 
         ListNode result = new ListNode(rootVal);
-        if (rootSum >= 10) {
-            result.next = new ListNode(1);
-        } else if (l1.next != null) {
-            result.next = new ListNode(l1.next.val);
-        } else if (l2.next != null) {
-            result.next = new ListNode(l2.next.val);
+
+        boolean needCarry = rootSum >= 10;
+        boolean hasl1Next = l1.next != null;
+        boolean hasl2Next = l2.next != null;
+
+        if (needCarry || hasl1Next || hasl2Next) {
+            int carry = needCarry ? 1 : 0;
+            int l1NextVal = l1.next != null ? l1.next.val : 0;
+            int l2NextVal = l2.next != null ? l2.next.val : 0;
+
+            result.next = new ListNode(carry + l1NextVal + l2NextVal);
         }
 
         return result;
