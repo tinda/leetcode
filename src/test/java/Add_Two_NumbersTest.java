@@ -1,10 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
 
 public class Add_Two_NumbersTest {
 
@@ -86,6 +83,14 @@ public class Add_Two_NumbersTest {
         Add_Two_Numbers.ListNode l1 = CreateListNodes(new int[]{5, 4});
         Add_Two_Numbers.ListNode l2 = CreateListNodes(new int[]{2, 8});
         Add_Two_Numbers.ListNode expected = CreateListNodes(new int[]{7, 2, 1});
+        AssertResult(expected, l1, l2);
+    }
+
+    @Test
+    public void L1_is_1_8_and_L2_is_0_should_return_1_8() {
+        Add_Two_Numbers.ListNode l1 = CreateListNodes(new int[]{1, 8});
+        Add_Two_Numbers.ListNode l2 = CreateListNodes(new int[]{0});
+        Add_Two_Numbers.ListNode expected = CreateListNodes(new int[]{1, 8});
         AssertResult(expected, l1, l2);
     }
 

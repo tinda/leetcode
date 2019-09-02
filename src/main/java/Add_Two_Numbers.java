@@ -1,6 +1,5 @@
 import java.util.Collection;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * https://leetcode.com/problems/add-two-numbers/
@@ -76,7 +75,7 @@ public class Add_Two_Numbers {
         ListNode result = new ListNode(rootSum % 10);
 
         int carryNext = rootSum >= 10 ? 1 : 0;
-        result.next = CreateSumNode(l1.next != null ? l1.next : null, l2.next != null ? l2.next : null, carryNext);
+        result.next = CreateSumNode(l1 != null ? l1.next : null, l2 != null ? l2.next : null, carryNext);
 
         return result;
     }
