@@ -35,6 +35,10 @@ public class Add_Two_Numbers {
             int l2NextVal = l2.next != null ? l2.next.val : 0;
 
             result.next = new ListNode(carry + l1NextVal + l2NextVal);
+
+            if (hasl1Next && l1.next.next != null) {
+                result.next.next = new ListNode(l1.next.next.val);
+            }
         }
 
         return result;

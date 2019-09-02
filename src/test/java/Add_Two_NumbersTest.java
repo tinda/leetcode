@@ -65,6 +65,14 @@ public class Add_Two_NumbersTest {
         AssertResult(expected, l1, l2);
     }
 
+    @Test
+    public void L1_is_5_4_3_and_L2_is_2_should_return_7_4_3() {
+        Add_Two_Numbers.ListNode l1 = CreateListNodes(new int[]{5, 4, 3});
+        Add_Two_Numbers.ListNode l2 = new Add_Two_Numbers.ListNode(2);
+        Add_Two_Numbers.ListNode expected = CreateListNodes(new int[]{7, 4, 3});
+        AssertResult(expected, l1, l2);
+    }
+
     private static Add_Two_Numbers.ListNode CreateListNodes(int[] nums) {
         if (nums.length == 0) {
             return null;
