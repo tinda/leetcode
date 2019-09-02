@@ -34,12 +34,20 @@ public class Add_Two_Numbers {
             int l1NextVal = l1.next != null ? l1.next.val : 0;
             int l2NextVal = l2.next != null ? l2.next.val : 0;
 
-            result.next = new ListNode(carry + l1NextVal + l2NextVal);
+            int nextSum = carry + l1NextVal + l2NextVal;
+            int nextVal = nextSum % 10;
 
-            if (hasl1Next && l1.next.next != null) {
-                result.next.next = new ListNode(l1.next.next.val);
-            } else if (hasl2Next && l2.next.next != null) {
-                result.next.next = new ListNode(l2.next.next.val);
+            result.next = new ListNode(nextVal);
+
+            boolean needCarry_2 = nextSum >= 10;
+            boolean hasl1Next_2 = hasl1Next && l1.next.next != null;
+            boolean hasl2Next_2 = hasl2Next && l2.next.next != null;
+
+            if (needCarry_2 || hasl1Next_2 || hasl2Next_2) {
+                int carry_2 = needCarry_2 ? 1 : 0;
+                int l1Next_2_Val = l1.next.next != null ? l1.next.val : 0;
+                int l2Next_2_Val = l2.next.next != null ? l2.next.val : 0;
+                result.next.next = new ListNode(carry_2 + l1Next_2_Val + l2Next_2_Val);
             }
         }
 
