@@ -20,7 +20,15 @@ import java.util.List;
 public class Add_Two_Numbers {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        return new ListNode(l1.val + l2.val);
+        int rootSum = l1.val + l2.val;
+        int rootVal = rootSum % 10;
+
+        ListNode result = new ListNode(rootVal);
+        if (rootSum >= 10) {
+            result.next = new ListNode(1);
+        }
+
+        return result;
     }
 
 

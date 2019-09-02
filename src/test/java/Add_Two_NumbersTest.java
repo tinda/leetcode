@@ -49,6 +49,6 @@ public class Add_Two_NumbersTest {
     }
 
     private static void AssertResult(Add_Two_Numbers.ListNode expected, Add_Two_Numbers.ListNode l1, Add_Two_Numbers.ListNode l2) {
-        Assert.assertSame(expected.All(), new Add_Two_Numbers().addTwoNumbers(l1, l2).All());
+        Assert.assertEquals(expected.All(), new Add_Two_Numbers().addTwoNumbers(l1, l2).All());
     }
 }
