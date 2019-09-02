@@ -8,16 +8,29 @@ import java.util.HashSet;
 
 public class Longest_Substring_Without_Repeating_Characters {
     public int lengthOfLongestSubstring(String s) {
-        if (s.length() == 1) {
+
+        char[] chararray = s.toCharArray();
+
+        if (chararray.length == 1) {
             return 1;
         }
 
         HashSet set = new HashSet();
 
-        for (char c : s.toCharArray()) {
-            set.add(c);
+        int index = 0;
+        int resultLength = 0;
+
+        while (index < chararray.length) {
+            char c = chararray[index];
+            if (!set.add(c)) {
+                resultLength = Math.max(resultLength, set.size());
+                set.clear();
+                //當發現字母重複時，目前 HashSet 所代表的字段長度與目前暫存的最大長度，取最大值暫存後，清除 HashSet 以存放下一個不重複字母的字段。
+                continue;
+            }
+            index++;
         }
 
-        return set.size();
+        return Math.max(resultLength, set.size());
     }
 }
