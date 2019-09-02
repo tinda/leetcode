@@ -26,6 +26,8 @@ public class Add_Two_Numbers {
         ListNode result = new ListNode(rootVal);
         if (rootSum >= 10) {
             result.next = new ListNode(1);
+        } else if (l1.next != null) {
+            result.next = new ListNode(l1.next.val);
         }
 
         return result;

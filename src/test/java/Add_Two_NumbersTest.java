@@ -42,12 +42,18 @@ public class Add_Two_NumbersTest {
         Add_Two_Numbers.ListNode l1 = new Add_Two_Numbers.ListNode(8);
         Add_Two_Numbers.ListNode l2 = new Add_Two_Numbers.ListNode(6);
 
-        Add_Two_Numbers.ListNode expected = new Add_Two_Numbers.ListNode(4);
-        expected.next = new Add_Two_Numbers.ListNode(1);
-
         Add_Two_Numbers.ListNode expected2 = CreateListNodes(new int[]{4, 1});
 
         AssertResult(expected2, l1, l2);
+    }
+
+    @Test
+    public void L1_is_5_4_and_L2_is_3_should_return_8_4() {
+        Add_Two_Numbers.ListNode l1 = CreateListNodes(new int[]{5, 4});
+        Add_Two_Numbers.ListNode l2 = CreateListNodes(new int[]{3});
+        Add_Two_Numbers.ListNode expected = CreateListNodes(new int[]{8, 4});
+
+        AssertResult(expected, l1, l2);
     }
 
     private static Add_Two_Numbers.ListNode CreateListNodes(int[] nums) {
