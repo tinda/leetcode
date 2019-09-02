@@ -1,4 +1,4 @@
-import java.util.HashSet;
+import java.util.*;
 
 /**
  * https://leetcode.com/problems/longest-substring-without-repeating-characters/
@@ -11,26 +11,24 @@ public class Longest_Substring_Without_Repeating_Characters {
 
         char[] chararray = s.toCharArray();
 
-        if (chararray.length == 1) {
-            return 1;
-        }
-
-        HashSet set = new HashSet();
+        Map<Character, Integer> map = new HashMap<>();
 
         int index = 0;
         int resultLength = 0;
 
         while (index < chararray.length) {
             char c = chararray[index];
-            if (!set.add(c)) {
-                resultLength = Math.max(resultLength, set.size());
-                set.clear();
-                //當發現字母重複時，目前 HashSet 所代表的字段長度與目前暫存的最大長度，取最大值暫存後，清除 HashSet 以存放下一個不重複字母的字段。
-                continue;
+
+            if (map.containsKey(c)) {
+                resultLength = Math.max(resultLength, map.size());
+                index = map.get(c);
+                map.clear();
+            } else {
+                map.put(c, index);
             }
             index++;
         }
 
-        return Math.max(resultLength, set.size());
+        return Math.max(resultLength, map.size());
     }
 }

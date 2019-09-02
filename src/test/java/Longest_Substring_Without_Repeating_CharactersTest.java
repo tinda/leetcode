@@ -27,6 +27,12 @@ public class Longest_Substring_Without_Repeating_CharactersTest {
         AssertLength("pwwkew", 3);
     }
 
+    // step 4
+    @Test
+    public void s_is_dvdf_length_should_be_3(){
+        AssertLength("dvdf", 3);
+    }
+
     private static void AssertLength(String s, int expected) {
         Assert.assertEquals(expected, new Longest_Substring_Without_Repeating_Characters().lengthOfLongestSubstring(s));
     }
