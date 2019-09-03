@@ -29,6 +29,12 @@ public class Best_Time_to_Buy_and_Sell_StockTest {
         AssertMaxProfitShouldBe(prices, 5);
     }
 
+    @Test
+    public void prices_is_4_1_7_maxProfit_should_be_6() {
+        int[] prices = {4, 1, 7};
+        AssertMaxProfitShouldBe(prices, 6);
+    }
+
     private static void AssertMaxProfitShouldBe(int[] prices, int expected) {
         Assert.assertEquals(expected, new Best_Time_to_Buy_and_Sell_Stock().maxProfit(prices));
     }
