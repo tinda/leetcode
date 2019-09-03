@@ -10,17 +10,11 @@ public class Single_Number {
     }
 
     public static int singleNumber(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
+        int result = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (map.get(nums[i]) != null) {
-                map.remove(nums[i]);
-            } else {
-                map.put(nums[i], nums[i]);
-            }
+            result = result ^ nums[i];
         }
-        String y = map.keySet().toString();
-        int x = Integer.parseInt(y.replace("[", "").replace("]", ""));
-        return x;
+        return result;
     }
 
     public static int singleNumber1(int[] nums) {
