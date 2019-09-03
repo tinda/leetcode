@@ -8,6 +8,10 @@ public class Single_NumberTest {
     @Test
     public void nums_is_5_singleNumber_should_be_5() {
         int[] nums = {5};
-        Assert.assertEquals(5, new Single_Number().singleNumber(nums));
+        AssertSingleNumber(nums, 5);
+    }
+
+    private static void AssertSingleNumber(int[] nums, int expected) {
+        Assert.assertEquals(expected, new Single_Number().singleNumber(nums));
     }
 }

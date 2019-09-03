@@ -10,7 +10,7 @@ public class Single_Number {
     }
 
     public static int singleNumber(int[] nums) {
-        return nums.length;
+        return nums[0];
     }
 
     public static int singleNumber1(int[] nums) {
