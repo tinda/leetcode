@@ -1,8 +1,6 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Stack;
 
 public class Single_Number {
 
@@ -12,6 +10,10 @@ public class Single_Number {
     }
 
     public static int singleNumber(int[] nums) {
+        return nums.length;
+    }
+
+    public static int singleNumber1(int[] nums) {
         Arrays.sort(nums);
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -22,13 +24,13 @@ public class Single_Number {
             }
         }
         String y = map.values().toString();
-        int x = Integer.parseInt(y.replace("[","").replace("]",""));
+        int x = Integer.parseInt(y.replace("[", "").replace("]", ""));
         return x;
     }
 
     public int singleNumber2(int[] nums) {
         int result = 0;
-        for(int i : nums) {
+        for (int i : nums) {
             result ^= i;
         }
         return result;
@@ -52,10 +54,10 @@ public class Single_Number {
          *
          * = N
          */
-        int ans =0;
+        int ans = 0;
 
         int len = nums.length;
-        for(int i=0;i!=len;i++)
+        for (int i = 0; i != len; i++)
             ans ^= nums[i];
 
         return ans;
