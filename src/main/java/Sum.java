@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -14,7 +15,21 @@ public class Sum {
 
     public List<List<Integer>> threeSum(int[] nums) {
 
-        return null;
+        List<List<Integer>> result = new LinkedList<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                for (int k = j + 1; k < nums.length; k++) {
+                    List<Integer> inside = new LinkedList<>();
+                    inside.add(nums[i]);
+                    inside.add(nums[j]);
+                    inside.add(nums[k]);
+                    result.add(inside);
+                }
+            }
+        }
+
+        return result;
     }
 
 }
