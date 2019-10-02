@@ -14,4 +14,16 @@ public class Contains_Duplicate_IITest {
         Assert.assertFalse(Contains_Duplicate_II.containsNearbyDuplicate(nums, k));
     }
 
+    /**
+     * 新增一個測試案例， nums = {5,5}, k = 1, return true;
+     */
+
+    @Test
+    public void Test_nums_5_5_and_k_is_1_should_return_true()
+    {
+        int[] nums = new int[] { 5, 5 };
+        int k = 1;
+        Assert.assertTrue(Contains_Duplicate_II.containsNearbyDuplicate(nums, k));
+    }
+
 }
