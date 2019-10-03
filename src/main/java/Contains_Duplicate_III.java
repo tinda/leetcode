@@ -4,7 +4,10 @@
  */
 
 public class Contains_Duplicate_III {
-    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+    public static boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+        if (k == 0) {
+            return false;
+        }
         return false;
     }
 }
