@@ -17,17 +17,16 @@ public class Two_Sum {
     public static int[] twoSum(int[] nums, int target) {
         Arrays.sort(nums);
 
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
+        int start = 0;
+        int end = nums.length - 1;
 
-                int twoSum = nums[i] + nums[j];
-                if (twoSum == target) {
-                    return new int[]{Math.min(i, j), Math.max(i, j)};
-                }
-
-                if (twoSum > target) {
-                    break;
-                }
+        while (start < end) {
+            if (nums[start] + nums[end] == target) {
+                return new int[]{Math.min(start, end), Math.max(start, end)};
+            } else if (nums[start] + nums[end] < target) {
+                start++;
+            } else {
+                end--;
             }
         }
 
