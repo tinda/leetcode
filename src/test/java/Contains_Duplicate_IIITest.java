@@ -21,7 +21,20 @@ public class Contains_Duplicate_IIITest {
         ShouldBeFalse(nums, 1, 1);
     }
 
-    private static void ShouldBeFalse(int[] nums, int k, int t) {
+    /**
+     * 新增一個失敗的測試案例，當 t = 0 時，應等同於 leet code 219 的需求
+     */
+    @Test
+    public void when_t_is_0_and_k_is_1_nums_5_5_should_return_true() {
+        int[] nums = {5, 5};
+        ShouldBeTrue(nums, 1, 0);
+    }
+
+    private void ShouldBeFalse(int[] nums, int k, int t) {
         Assert.assertFalse(Contains_Duplicate_III.containsNearbyAlmostDuplicate(nums, k, t));
+    }
+
+    private void ShouldBeTrue(int[] nums, int k, int t) {
+        Assert.assertTrue(Contains_Duplicate_III.containsNearbyAlmostDuplicate(nums, k, t));
     }
 }
