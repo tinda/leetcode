@@ -29,6 +29,15 @@ public class Power_of_TwoTest {
         ShouldBeTrue(2);
     }
 
+    /**
+     * Step 4: n 為 6, 為 2 的倍數，但非 2 的次方數
+     */
+    @Test
+    public void n_is_6_should_return_false()
+    {
+        ShouldBeFalse(6);
+    }
+
     private static void ShouldBeTrue(int n) {
         Assert.assertTrue(Power_of_Two.isPowerOfTwo(n));
     }
