@@ -10,7 +10,6 @@ public class Power_of_Two {
         char[] chararray = Integer.toBinaryString(n).toCharArray();
         int counter = 0;
         for (char cha : chararray) {
-            System.out.println(cha);
             if (cha == '1') {
                 counter++;
             }

@@ -8,7 +8,7 @@ public class Power_of_TwoTest {
     @Test
     public void n_is_less_or_equal_0_should_return_false() {
         int n = 0;
-        ShouldBeFalse(n);
+        IsNotPowerOfTwo(n);
     }
 
     /**
@@ -17,7 +17,7 @@ public class Power_of_TwoTest {
     @Test
     public void n_is_1_should_return_true() {
         int n = 1;
-        ShouldBeTrue(n);
+        IsPowerOfTwo(n);
     }
 
     /**
@@ -26,7 +26,7 @@ public class Power_of_TwoTest {
     @Test
     public void n_is_2_should_return_true()
     {
-        ShouldBeTrue(2);
+        IsPowerOfTwo(2);
     }
 
     /**
@@ -35,14 +35,14 @@ public class Power_of_TwoTest {
     @Test
     public void n_is_6_should_return_false()
     {
-        ShouldBeFalse(6);
+        IsNotPowerOfTwo(6);
     }
 
-    private static void ShouldBeTrue(int n) {
+    private static void IsPowerOfTwo(int n) {
         Assert.assertTrue(Power_of_Two.isPowerOfTwo(n));
     }
 
-    private static void ShouldBeFalse(int n) {
+    private static void IsNotPowerOfTwo(int n) {
         Assert.assertFalse(Power_of_Two.isPowerOfTwo(n));
     }
 }
