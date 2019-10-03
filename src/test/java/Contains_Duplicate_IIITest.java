@@ -57,6 +57,24 @@ public class Contains_Duplicate_IIITest {
         ShouldBeTrue(nums, 1, 1);
     }
 
+    /**
+     * 新增一個 k = 2, t = 2 失敗的測試案例
+     */
+    @Test
+    public void when_t_is_2_and_k_is_2_nums_6_5_should_return_true() {
+        int[] nums = {6, 5, 4};
+        ShouldBeTrue(nums, 2, 2);
+    }
+
+    /**
+     * 新增一個 k = 2, t = 1 的測試案例
+     */
+    @Test
+    public void nums_1_3_1_k_is_2_t_is_1_should_return_true() {
+        int[] nums = {1, 3, 1};
+        ShouldBeTrue(nums, 2, 1);
+    }
+
     private void ShouldBeFalse(int[] nums, int k, int t) {
         Assert.assertFalse(Contains_Duplicate_III.containsNearbyAlmostDuplicate(nums, k, t));
     }
