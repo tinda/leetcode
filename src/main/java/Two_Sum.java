@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
  * <p>
@@ -13,14 +15,23 @@ public class Two_Sum {
     }
 
     public static int[] twoSum(int[] nums, int target) {
+        Arrays.sort(nums);
+
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target) {
-                    return new int[]{i, j};
+
+                int twoSum = nums[i] + nums[j];
+                if (twoSum == target) {
+                    return new int[]{Math.min(i, j), Math.max(i, j)};
+                }
+
+                if (twoSum > target) {
+                    break;
                 }
             }
         }
-        return new int[]{0, 1};
+
+        return null;
     }
 
     public static int[] twoSum2(int[] nums, int target) {
