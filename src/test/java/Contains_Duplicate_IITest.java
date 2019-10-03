@@ -74,4 +74,14 @@ public class Contains_Duplicate_IITest {
         int k = 2;
         Assert.assertFalse(Contains_Duplicate_II.containsNearbyDuplicate(nums, k));
     }
+
+    /**
+     * 新增一個測試案例，nums = {9,5,6,4,9,4,4,9}, k = 3, return true;
+     */
+    @Test
+    public void Test_nums_9_5_6_9_4_4_9_and_k_is_3_should_return_true() {
+        int[] nums = new int[]{9, 5, 6, 4, 9, 4, 4, 9};
+        int k = 3;
+        Assert.assertTrue(Contains_Duplicate_II.containsNearbyDuplicate(nums, k));
+    }
 }
