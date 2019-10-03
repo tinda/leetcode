@@ -52,6 +52,6 @@ public class Contains_Duplicate_IITest {
     public void Test_nums_5_6_5_and_k_is_2_should_return_true() {
         int[] nums = new int[]{5, 6, 5};
         int k = 2;
-        Assert.assertTrue(Contains_Duplicate_II.containsNearbyDuplicate(nums, k));
+        Assert.assertTrue(Contains_Duplicate_II.containsNearbyDuplicate2(nums, k));
     }
 }

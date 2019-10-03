@@ -25,7 +25,19 @@ public class Contains_Duplicate_II {
                 if (!set.add(num)) return true;
             }
         }
+        return false;
+    }
 
+    public static boolean containsNearbyDuplicate2(int[] nums, int k) {
+        if (k == 0) return false;
+
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (!set.add(nums[i])) return true;
+
+            //keep only 1 window sliding, remove int just out of window
+            if (i >= k) set.remove(nums[i - k]);
+        }
         return false;
     }
 }
