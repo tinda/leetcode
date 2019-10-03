@@ -20,6 +20,15 @@ public class Power_of_TwoTest {
         ShouldBeTrue(n);
     }
 
+    /**
+     * Step 3: n 為 2, 應為 2 的次方
+     */
+    @Test
+    public void n_is_2_should_return_true()
+    {
+        ShouldBeTrue(2);
+    }
+
     private static void ShouldBeTrue(int n) {
         Assert.assertTrue(Power_of_Two.isPowerOfTwo(n));
     }
