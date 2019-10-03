@@ -14,6 +14,9 @@ public class Contains_Duplicate_III {
 
         Set<Integer> set = new HashSet<>();
         for (int i = 0; i < nums.length; i++) {
+            if (i > 0 && (nums[i] - nums[i - 1] == t)) {
+                return true;
+            }
             if (!set.add(nums[i])) return true;
             if (i >= k) set.remove(nums[i - k]);
         }
