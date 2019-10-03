@@ -52,6 +52,16 @@ public class Contains_Duplicate_IITest {
     public void Test_nums_5_6_5_and_k_is_2_should_return_true() {
         int[] nums = new int[]{5, 6, 5};
         int k = 2;
-        Assert.assertTrue(Contains_Duplicate_II.containsNearbyDuplicate2(nums, k));
+        Assert.assertTrue(Contains_Duplicate_II.containsNearbyDuplicate(nums, k));
+    }
+
+    /**
+     * 新增一個測試案例，nums = {1,2,3,2,1}, k = 2, return true;
+     */
+    @Test
+    public void Test_nums_1_2_3_2_1_k_is_2_should_return_true() {
+        int[] nums = new int[]{1, 2, 3, 2, 1};
+        int k = 2;
+        Assert.assertTrue(Contains_Duplicate_II.containsNearbyDuplicate(nums, k));
     }
 }

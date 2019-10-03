@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
  */
 
 public class Contains_Duplicate_II {
-    public static boolean containsNearbyDuplicate(int[] nums, int k) {
+    public static boolean containsNearbyDuplicate2(int[] nums, int k) {
         if (k == 0) return false;
 
         int windowSize = k + 1;
@@ -28,7 +28,7 @@ public class Contains_Duplicate_II {
         return false;
     }
 
-    public static boolean containsNearbyDuplicate2(int[] nums, int k) {
+    public static boolean containsNearbyDuplicate(int[] nums, int k) {
         if (k == 0) return false;
 
         Set<Integer> set = new HashSet<>();
