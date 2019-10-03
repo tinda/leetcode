@@ -9,11 +9,21 @@ public class Two_SumTest {
     @Test
     public void Test_nums_is_1_8_and_target_is_9_should_return_0_1() {
         int[] nums = {1, 8};
-        int target = 9;
+        int[] actual = TwoSum(nums, 9);
 
         int[] expected = {0, 1};
-        int[] actual = Two_Sum.twoSum(nums, target);
+        ShouldEqual(expected, actual);
+    }
 
+    private static int[] TwoSum(int[] nums, int target)
+    {
+        return Two_Sum.twoSum(nums, target);
+    }
+
+    private static void ShouldEqual(int[] expected, int[] actual)
+    {
         Assert.assertArrayEquals(expected, actual);
     }
+
+
 }
