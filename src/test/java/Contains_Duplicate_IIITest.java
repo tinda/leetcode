@@ -30,6 +30,15 @@ public class Contains_Duplicate_IIITest {
         ShouldBeTrue(nums, 1, 0);
     }
 
+    /**
+     * 新增相關測試案例與產品代碼，以滿足所有 t = 0 的情況
+     */
+    @Test
+    public void when_t_is_0_and_k_is_1_nums_5_6_5_should_return_false() {
+        int[] nums = {5, 6, 5};
+        ShouldBeFalse(nums, 1, 0);
+    }
+
     private void ShouldBeFalse(int[] nums, int k, int t) {
         Assert.assertFalse(Contains_Duplicate_III.containsNearbyAlmostDuplicate(nums, k, t));
     }

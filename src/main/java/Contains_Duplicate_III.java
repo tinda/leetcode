@@ -8,13 +8,14 @@ import java.util.Set;
 
 public class Contains_Duplicate_III {
     public static boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
-        if (k == 0 || nums.length < 2) {
+        if (k == 0) {
             return false;
         }
 
         Set<Integer> set = new HashSet<>();
         for (int i = 0; i < nums.length; i++) {
             if (!set.add(nums[i])) return true;
+            if (i >= k) set.remove(nums[i - k]);
         }
 
         return false;
