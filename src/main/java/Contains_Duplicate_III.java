@@ -5,7 +5,7 @@
 
 public class Contains_Duplicate_III {
     public static boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
-        if (k == 0) {
+        if (k == 0 || nums.length < 2) {
             return false;
         }
         return false;
