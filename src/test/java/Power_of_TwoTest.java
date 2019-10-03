@@ -11,6 +11,19 @@ public class Power_of_TwoTest {
         ShouldBeFalse(n);
     }
 
+    /**
+     * Step 2: n 為 1，應為 2 的次方
+     */
+    @Test
+    public void n_is_1_should_return_true() {
+        int n = 1;
+        ShouldBeTrue(n);
+    }
+
+    private static void ShouldBeTrue(int n) {
+        Assert.assertTrue(Power_of_Two.isPowerOfTwo(n));
+    }
+
     private static void ShouldBeFalse(int n) {
         Assert.assertFalse(Power_of_Two.isPowerOfTwo(n));
     }
