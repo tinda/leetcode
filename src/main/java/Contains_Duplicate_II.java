@@ -17,11 +17,9 @@ public class Contains_Duplicate_II {
 
         int windowSize = k + 1;
         for (int i = 0; i < nums.length; i++) {
-            System.out.println("**-> " + i);
             List<Integer> windowNums = Arrays.stream(nums).skip(i).limit(windowSize).boxed().collect(Collectors.toList());
             Set<Integer> set = new HashSet<>();
             for (int num : windowNums) {
-                System.out.println("*-> " + num);
                 if (!set.add(num)) return true;
             }
         }
