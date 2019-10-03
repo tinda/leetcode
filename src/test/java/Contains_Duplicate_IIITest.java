@@ -48,6 +48,15 @@ public class Contains_Duplicate_IIITest {
         ShouldBeTrue(nums, 1, 1);
     }
 
+    /**
+     * 新增一個失敗的測試案例，nums={6,5}, k=1, t=1
+     */
+    @Test
+    public void when_t_is_1_and_k_is_1_nums_6_5_should_return_true() {
+        int[] nums = {6, 5};
+        ShouldBeTrue(nums, 1, 1);
+    }
+
     private void ShouldBeFalse(int[] nums, int k, int t) {
         Assert.assertFalse(Contains_Duplicate_III.containsNearbyAlmostDuplicate(nums, k, t));
     }
