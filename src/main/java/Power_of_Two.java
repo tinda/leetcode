@@ -5,6 +5,7 @@
 
 public class Power_of_Two {
     public static boolean isPowerOfTwo(int n) {
+        if (n <= 0) return false;
         return false;
     }
 }

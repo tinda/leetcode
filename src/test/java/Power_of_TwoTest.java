@@ -8,6 +8,10 @@ public class Power_of_TwoTest {
     @Test
     public void n_is_less_or_equal_0_should_return_false() {
         int n = 0;
+        ShouldBeFalse(n);
+    }
+
+    private static void ShouldBeFalse(int n) {
         Assert.assertFalse(Power_of_Two.isPowerOfTwo(n));
     }
 }
