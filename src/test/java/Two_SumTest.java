@@ -27,6 +27,18 @@ public class Two_SumTest {
         ShouldEqual(expected, actual);
     }
 
+    /**
+     * Step 8, 新增測試案例，Test_nums_is_3_2_4_and_target_is_6_should_return_1_2
+     */
+    @Test
+    public void Test_nums_is_3_2_4_and_target_is_6_should_return_1_2() {
+        int[] nums = {3, 2, 4};
+        int[] actual = TwoSum(nums, 6);
+
+        int[] expected = {1, 2};
+        ShouldEqual(expected, actual);
+    }
+
     private static int[] TwoSum(int[] nums, int target) {
         return Two_Sum.twoSum(nums, target);
     }
