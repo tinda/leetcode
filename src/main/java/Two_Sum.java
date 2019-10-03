@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
@@ -15,6 +17,19 @@ public class Two_Sum {
     }
 
     public static int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> dictionary = new HashMap();
+        for (int i = 0; i < nums.length; i++) {
+            int key = target - nums[i];
+            if (dictionary.containsKey(key)) {
+                return new int[]{dictionary.get(key), i};
+            } else if (!dictionary.containsKey(nums[i])) {
+                dictionary.put(nums[i], i);
+            }
+        }
+        return null;
+    }
+
+    public static int[] twoSum1(int[] nums, int target) {
         Arrays.sort(nums);
 
         int start = 0;
@@ -29,7 +44,6 @@ public class Two_Sum {
                 end--;
             }
         }
-
         return null;
     }
 
