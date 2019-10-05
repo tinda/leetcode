@@ -24,10 +24,50 @@
 public class Roman_to_Integer {
 
     public static void main(String[] args) {
-
+        System.out.println(romanToInt("IX"));
     }
 
-    public int romanToInt(String s) {
-        return 0;
+    public static int romanToInt(String s) {
+        char[] chars = s.toCharArray();
+
+        int output = 0;
+        for (int i = 0; i < chars.length; i++) {
+            switch (chars[i]) {
+                case 'I':
+                    if ((i + 1 != chars.length) && ((chars[i + 1] == 'V') || (chars[i + 1] == 'X'))) {
+                        output += -1;
+                    } else {
+                        output += 1;
+                    }
+                    break;
+                case 'V':
+                    output += 5;
+                    break;
+                case 'X':
+                    if ((i + 1 != chars.length) && ((chars[i + 1] == 'L') || (chars[i + 1] == 'C'))) {
+                        output += -10;
+                    } else {
+                        output += 10;
+                    }
+                    break;
+                case 'L':
+                    output += 50;
+                    break;
+                case 'C':
+                    if ((i + 1 != chars.length) && ((chars[i + 1] == 'D') || (chars[i + 1] == 'M'))) {
+                        output += -100;
+                    } else {
+                        output += 100;
+                    }
+                    break;
+                case 'D':
+                    output += 500;
+                    break;
+                case 'M':
+                    output += 1000;
+                    break;
+            }
+        }
+        return output;
     }
 }
