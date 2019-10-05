@@ -67,6 +67,33 @@ public class Contains_Duplicate_IIITest {
     }
 
     /**
+     * 新增一個 k = 3, t = 0 的測試案例
+     */
+    @Test
+    public void nums_1_2_3_1_k_is_3_t_is_0_should_return_true() {
+        int[] nums = {1, 2, 3, 1};
+        ShouldBeTrue(nums, 3, 0);
+    }
+
+    /**
+     * 新增一個 k = 1, t = 2 的測試案例
+     */
+    @Test
+    public void nums_1_0_1_1_k_is_1_t_is_2_should_return_true() {
+        int[] nums = {1, 0, 1, 1};
+        ShouldBeTrue(nums, 1, 2);
+    }
+
+    /**
+     * 新增一個 k = 2, t = 3 的測試案例
+     */
+    @Test
+    public void nums_1_5_9_1_5_9_k_is_2_t_is_3_should_return_true() {
+        int[] nums = {1, 5, 9, 1, 5, 9};
+        ShouldBeFalse(nums, 2, 3);
+    }
+
+    /**
      * 新增一個 k = 2, t = 1 的測試案例
      */
     @Test
