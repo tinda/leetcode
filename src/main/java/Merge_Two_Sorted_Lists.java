@@ -1,10 +1,14 @@
 /**
+ * https://leetcode.com/problems/merge-two-sorted-lists/
+ *
  * Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
  * <p>
  * Example:
  * <p>
  * Input: 1->2->4, 1->3->4
  * Output: 1->1->2->3->4->4
+ *
+ * 參考：https://ithelp.ithome.com.tw/articles/10213265
  */
 
 public class Merge_Two_Sorted_Lists {

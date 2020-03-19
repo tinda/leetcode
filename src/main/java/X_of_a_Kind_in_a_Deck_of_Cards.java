@@ -2,7 +2,7 @@ import java.util.*;
 
 /**
  * https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/
- * <p>
+ *
  * In a deck of cards, each card has an integer written on it.
  * <p>
  * Return true if and only if you can choose X >= 2 such that it is possible to split the entire deck into 1 or more groups of cards, where:

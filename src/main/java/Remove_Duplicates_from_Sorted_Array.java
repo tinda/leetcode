@@ -2,9 +2,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+ *
  * Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
  * <p>
  * Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+ *
+ *
+ * 參考：https://ithelp.ithome.com.tw/articles/10213266
  */
 public class Remove_Duplicates_from_Sorted_Array {
 

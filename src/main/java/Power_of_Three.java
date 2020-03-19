@@ -1,7 +1,8 @@
 /**
- * Given an integer, write a function to determine if it is a power of three.
- * <p>
  * https://leetcode.com/problems/power-of-three/?tab=Description
+ *
+ * Given an integer, write a function to determine if it is a power of three.
+ *
  */
 
 public class Power_of_Three {

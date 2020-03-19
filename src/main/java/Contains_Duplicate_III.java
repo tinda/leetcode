@@ -2,9 +2,10 @@ import java.util.HashMap;
 import java.util.TreeSet;
 
 /**
- * Given an array of integers, find out whether there are two distinct indices i and j in the array such that the absolute difference between nums[i] and nums[j] is at most t and the absolute difference between i and j is at most k.
  * https://leetcode.com/problems/contains-duplicate-iii/
- * <p>
+ *
+ * Given an array of integers, find out whether there are two distinct indices i and j in the array such that the absolute difference between nums[i] and nums[j] is at most t and the absolute difference between i and j is at most k.
+ *
  * 解釋：給一個 int[] nums ，以及 2 個正整數 k 與 t，如果存在著 i 與 j 使得 |nums[i] - nums[j]| <= t，且 |i-j|<= k，則回傳 true。若不然，則回傳 false。
  */
 

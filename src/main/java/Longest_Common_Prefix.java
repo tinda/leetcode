@@ -1,8 +1,11 @@
 /**
+ * https://leetcode.com/problems/longest-common-prefix/
+ *
  * Write a function to find the longest common prefix string amongst an array of strings.
  * <p>
  * If there is no common prefix, return an empty string "".
- * https://leetcode.com/problems/longest-common-prefix/
+ *
+ * 參考：https://ithelp.ithome.com.tw/articles/10213258
  */
 
 public class Longest_Common_Prefix {
@@ -12,6 +15,10 @@ public class Longest_Common_Prefix {
         System.out.println(longestCommonPrefix(strs));
     }
 
+
+// 使用String.indexOf()來檢查，
+// 當 pre 在剛好 0 的位置代表相同的部分已經切齊開頭
+// 所以不論這個值是>0(表示出現在中間)或<0(根本沒出現)，都代表pre需要被調整
 
     public static String longestCommonPrefix(String[] strs) {
         if (strs.length == 0) return "";
